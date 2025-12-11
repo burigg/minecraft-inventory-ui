@@ -1,0 +1,21 @@
+{
+  "name": "minecraft-inventory-ui",
+  "scripts": {
+    "build": "tsup",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^10.1.6",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "storybook": "^10.1.6",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7"
+  }
+}
