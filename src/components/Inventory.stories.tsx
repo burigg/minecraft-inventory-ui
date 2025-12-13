@@ -13,7 +13,19 @@ type Story = StoryObj<typeof Inventory>;
 
 export const Primary: Story = {
   args: {
-    Primary: true,
-    label: "Inventory",
-  }
+    items: [
+      { 
+        type: "APPLE_GOLDEN",
+        amount: 12,
+      },
+      { type: "LAVA_BUCKET"},
+      { type: "WATER_BUCKET"},
+      // { type: "DIAMOND_SWORD" },
+      // { type: "DIAMOND_PICKAXE" },
+      // { type: "FISHING_ROD" },
+      // { type: "LAVA_BUCKET" },
+      // { type: "WATER_BUCKET" },
+      // { type: "COBBLESTONE" },
+    ],
+  },
 }
