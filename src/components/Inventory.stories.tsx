@@ -1,4 +1,3 @@
-import React from "react";
 import { Inventory } from "./Inventory";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -14,18 +13,42 @@ type Story = StoryObj<typeof Inventory>;
 export const Primary: Story = {
   args: {
     items: [
-      { 
-        type: "APPLE_GOLDEN",
-        amount: 12,
-      },
+      { type: "DIAMOND_SWORD"},
+      { type: "DIAMOND_PICKAXE"},
+      { type: "FISHING_ROD"},
       { type: "LAVA_BUCKET"},
       { type: "WATER_BUCKET"},
-      // { type: "DIAMOND_SWORD" },
-      // { type: "DIAMOND_PICKAXE" },
-      // { type: "FISHING_ROD" },
-      // { type: "LAVA_BUCKET" },
-      // { type: "WATER_BUCKET" },
-      // { type: "COBBLESTONE" },
+      { type: "COBBLESTONE", amount: 64},
+      { type: "GOLDEN_APPLE", amount: 12},
+      { type: "GOLDEN_APPLE", amount: 1},
+      { type: "COOKED_BEEF", amount: 64},
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      { type: "LAVA_BUCKET"},
+      { type: "WATER_BUCKET"},
+      null,
+      null,
+      null,
+      null,
+      null,
+      { type: "DIAMOND_AXE"},
+      null,
+      { type: "LAVA_BUCKET"},
+      { type: "WATER_BUCKET"},
+      { type: "WOOD", amount: 64},
+      null,
+      null,
+      null,
     ],
   },
 }

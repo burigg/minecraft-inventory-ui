@@ -89,7 +89,7 @@ export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
         imageRendering: "pixelated",
       }}
     >
-      {/* Main inventory grid (3 rows) */}
+      {/* Main inventory grid (3 rows) - items[9] to items[35] */}
       <div
         style={{
           position: "absolute",
@@ -102,11 +102,11 @@ export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
         }}
       >
         {Array.from({ length: columns * rows }).map((_, index) =>
-          renderSlot(index)
+          renderSlot(index, columns)
         )}
       </div>
 
-      {/* Hotbar (4th row) */}
+      {/* Hotbar (4th row) - items[0] to items[8] */}
       <div
         style={{
           position: "absolute",
@@ -119,7 +119,7 @@ export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
         }}
       >
         {Array.from({ length: columns }).map((_, index) =>
-          renderSlot(index, columns * rows)
+          renderSlot(index)
         )}
       </div>
     </div>
