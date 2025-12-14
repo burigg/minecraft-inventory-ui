@@ -10,16 +10,20 @@ export interface InventoryItem {
 }
 
 export interface InventoryProps {
+  scale?: number;
   items?: (InventoryItem | null)[];
 }
 
-export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
+export const Inventory: React.FC<InventoryProps> = ({
+  items = [],
+  scale = 1,
+}) => {
   const columns = 9;
   const rows = 3;
-  const slotSize = 16;
-  const padding = 8;
-  const gap = 2;
-  const hotbarGap = 6;
+  const slotSize = 16 * scale;
+  const padding = 8 * scale;
+  const gap = 2 * scale;
+  const hotbarGap = 6 * scale;
 
   const renderSlot = (index: number, startIndex: number = 0) => {
     const slotIndex = startIndex + index;
@@ -56,7 +60,7 @@ export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
                   position: "absolute",
                   right: 0,
                   bottom: 0,
-                  fontSize: 8,
+                  fontSize: 8 * scale,
                   fontFamily: "monospace",
                   fontWeight: "bold",
                   color: "white",
@@ -84,8 +88,8 @@ export const Inventory: React.FC<InventoryProps> = ({ items = [] }) => {
         backgroundImage: `url(${inventoryImage})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        width: 176,
-        height: 90,
+        width: 176 * scale,
+        height: 90 * scale,
         imageRendering: "pixelated",
       }}
     >

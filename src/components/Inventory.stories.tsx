@@ -12,6 +12,7 @@ type Story = StoryObj<typeof Inventory>;
 
 export const Primary: Story = {
   args: {
+    scale: 4,
     items: [
       { type: "DIAMOND_SWORD"},
       { type: "DIAMOND_PICKAXE"},
