@@ -16,7 +16,8 @@
   "scripts": {
     "build": "tsdown",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish": "bun run build && bun publish --access public"
   },
   "peerDependencies": {
     "react": "^19.2.3",
