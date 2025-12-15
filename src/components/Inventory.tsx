@@ -3,7 +3,6 @@ import inventoryImage from "../images/minecraft_inventory.png";
 import missing from "../images/missing.webp";
 import { getItemIconUrl } from "../lib/itemIcon";
 
-/** インベントリアイテム */
 export interface InventoryItem {
   type: string;
   amount?: number;
