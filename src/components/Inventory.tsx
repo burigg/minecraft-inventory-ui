@@ -6,6 +6,7 @@ import { getItemIconUrl } from "../lib/itemIcon";
 export interface InventoryItem {
   type: string;
   amount?: number;
+  damage?: number;
 }
 
 export interface InventoryProps {
@@ -28,7 +29,7 @@ export const Inventory: React.FC<InventoryProps> = ({
     const slotIndex = startIndex + index;
     const item = items[slotIndex] ?? null;
     const amount = item?.amount ?? 0;
-    const iconUrl = item ? getItemIconUrl(item.type) ?? missing : missing;
+    const iconUrl = item ? getItemIconUrl(item.type, item.damage) ?? missing : missing;
 
     return (
       <div

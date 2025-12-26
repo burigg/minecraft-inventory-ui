@@ -20,6 +20,9 @@ import invCobbleWall from "../images/items/inv_cobble_wall.png";
 import invCobblestone from "../images/items/inv_cobblestone.png";
 import invOakPlank from "../images/items/inv_oak_plank.png";
 import potionBottleEmpty from "../images/items/potion_bottle_empty.png";
+import potionHealing from "../images/items/potion_of_healing.png";
+import potionSpeed from "../images/items/potion_of_speed.png";
+import splashPotionHealing from "../images/items/splash_potion_of_healing.png";
 import stoneAxe from "../images/items/stone_axe.png";
 import stonePickaxe from "../images/items/stone_pickaxe.png";
 import stoneShovel from "../images/items/stone_shovel.png";
@@ -43,6 +46,7 @@ type ItemId =
   | "ENDER_PEARL"
   | "FISHING_ROD"
   | "GLASS_BOTTLE"
+  | "POTION"
   | "GOLDEN_APPLE"
   | "GOLDEN_CARROT"
   | "LAVA_BUCKET"
@@ -71,6 +75,7 @@ const ITEM_ICONS: Record<ItemId, string> = {
   ENDER_PEARL: enderPearl,
   FISHING_ROD: fishingRod,
   GLASS_BOTTLE: potionBottleEmpty,
+  POTION: potionBottleEmpty,
   GOLDEN_APPLE: appleGolden,
   GOLDEN_CARROT: carrotGolden,
   LAVA_BUCKET: bucketLava,
@@ -82,7 +87,16 @@ const ITEM_ICONS: Record<ItemId, string> = {
   WOOD: invOakPlank,
 };
 
-export function getItemIconUrl(id: string): string | undefined {
+export function getItemIconUrl(id: string, damage?: number): string | undefined {
   const itemId = id as ItemId;
+  if (id === "POTION" && damage == 34) {
+    return potionSpeed;
+  }
+  if (id === "POTION" && damage == 37) {
+    return potionHealing;
+  }
+  if (id === "POTION" && damage == 16421) {
+    return splashPotionHealing;
+  }
   return ITEM_ICONS[itemId];
 }
