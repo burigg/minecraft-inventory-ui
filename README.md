@@ -83,7 +83,7 @@ const SampleComponent = () => {
 ```
 
 ## Contributing
-Coming Soon...
+Work in Progress...
 
 ## Contact
 There are several ways to contact:
